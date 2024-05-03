@@ -1,0 +1,559 @@
+header {
+    background-color: white;
+    height: 60px;
+    box-shadow: 0px 15px 10px -1px rgba(0, 0, 0, 0.486);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1;
+}
+header > a {
+    margin-left: 15px;
+    color: black;
+}
+.tabButton:hover {
+    transition: all .2s ease-in-out;
+    background-color: rgba(255, 37, 37, 0.8);
+}
+header > h1 {
+    margin-right: auto;
+    margin-left: 20px
+}
+html{
+    font-family:Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+}
+
+.PT-Headerbutton{
+    height: 35px;
+    border-radius: 20px;
+    margin-right: 100px;
+
+    color: black;
+    background-color: red;
+    font-weight: bold;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.PT-Headerbutton:hover{
+    color: red;
+    background-color: rgb(105, 105, 105);
+}
+.tabButton{
+    height: 28px;
+    border-radius: 20px;
+
+    background-color: white;
+    font-weight: normal;
+    font-size: 14px;
+    text-decoration:none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.topBanner_parent{
+    position: relative;
+    overflow: hidden;
+
+    height: 555px;
+}
+.topBanner{
+    position: absolute;
+    content: '';
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover; 
+    object-position: 100% 80%;
+
+    inset: 0;
+    opacity: 0;
+    animation-name: imageFadeIn;
+    animation-duration: 24s;
+    animation-iteration-count: infinite;
+
+    pointer-events: none;
+}
+.topBanner:nth-child(1){
+    animation-delay: 0s;
+}
+.topBanner:nth-child(2){
+    animation-delay: 8s;
+}
+.topBanner:nth-child(3){
+    animation-delay: 16s;
+}
+
+@keyframes imageFadeIn
+{
+    0%{
+        opacity: 0;
+        transform: scale(100%);
+    }
+    16.66%{
+        opacity: 1;
+    }
+    33.33%{
+        opacity: 1;
+    }
+    48.66%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(110%);
+    }
+}
+    
+.top-bottomBar{
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    margin-top: -10px;
+    color: white;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1;
+}
+.top-bottomBar > h1{
+    word-spacing: 15px;
+}
+
+.welcomeText{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.welcomeText > h4{
+    font-weight: bold;
+    color: gray;
+    margin-top: 70px;
+    margin-bottom: -15px;
+}
+.twoColumnTextContainer{
+    column-count: 2;
+    column-gap: 20px;
+    column-width:20px;
+}
+.twoColumnTextContainer > p{
+    font-size: 14px;
+}
+.TrainerPanal{
+    
+    /*box-shadow: 0px 15px 10px -1px rgba(0, 0, 0, 0.486);*/
+    border-radius: 10px;
+
+}
+.TrainerDescription{
+    margin-top: -450px;
+    line-height: 25px;
+}
+.TrainerDescription > h1{
+    color: black;
+    font-size: 50px;
+    margin-left: 250px;
+}
+.TrainerDescription > p{
+    font-size: 15px;
+    text-align: center;
+    margin-right: 450px;
+}
+.trainerPicture{
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 900px;
+    width: 300px;
+
+    box-shadow: 0px 15px 10px -1px rgba(0, 0, 0, 0.486);
+}
+
+.teamSection{
+    width: 100%;
+    height: 700px;
+    margin-top: -20px;
+    /*
+    background-image: url(Images/tiegerhasen_background.png);
+    background-size: 100% 100%;
+    */
+
+    box-shadow: 0px 0px 100px 20px rgba(0, 0, 0, 0.8);
+    
+    /*background-color: rgb(239, 239, 239);*/
+}
+.teamSection > h1{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    padding-top: 25px;
+}
+
+
+.kursplanSection{
+    padding-top: 100px;
+    padding-bottom: 30px;
+    visibility: visible;
+}
+.kursplanSection > h1{
+    font-size: 50px;
+    text-align: center;
+}
+.kursplanColumns{
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.kurs
+{
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+}
+.kurs:hover{
+    cursor: pointer;
+}
+.kurs:hover .kurs_beschreibung
+{
+    transform: translateY(-70%);
+    visibility: visible;
+}
+.kurs:hover .kurs_shadow
+{
+    box-shadow: inset 0px -300px 100px 0px rgba(0, 0, 0, 0.8);
+}
+.kurs_shadow{
+    box-shadow: inset 0px -80px 50px 10px rgba(0, 0, 0, 0.7);
+
+    transition:all .5s ease-in-out;
+
+    position: absolute;
+    height: 400px;
+    width: 300px;
+    margin-top: -403px;
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+.kurs_beschreibung{
+    background-color: rgba(0, 0, 0, 0);
+
+    transform: translateY(0%);
+    transition: all .5s ease-in-out;
+    
+    position: absolute;
+    height: 400px;
+    width: 300px;
+    border-radius: 10px;
+
+}
+.tooltip_text{
+    /*visibility: hidden;*/
+
+    margin-top: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    color: white;
+
+}
+.kurs_beschreibung > h2{
+    margin-top: 330px;
+    padding-left: 20px;
+
+    position: absolute;
+
+    color: red;
+}
+.kurs_beschreibung > p{
+    position:absolute;
+    margin-top: 360px;
+    padding-left: 20px;
+
+    color: white;
+    font-weight:bold;
+
+}
+.kurs > img{
+    border-radius: 10px;
+
+    /*Crop Image*/
+    object-fit: cover;
+    object-position: 50% 25%; 
+}
+
+.probetraining{
+    width:1000px; 
+    height: 500px; 
+    background-color: red; 
+    border-radius: 20px; 
+    margin: auto;
+    margin-top: 140px;
+    margin-bottom: 200px;
+}
+.p-container{
+    display: flex;
+    justify-content:center;  
+    align-items: center;
+    gap: 20px;
+
+    margin-top: -20px;
+}
+.p-item{
+    width:280px; 
+    height: 220px; 
+    background-color: white; 
+    border-radius: 10px; 
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.p-item > img{
+    padding-left: 20px; 
+    padding-top: 25px;
+    pointer-events: none;
+}
+.p-button{
+    width: 150px;
+    height: 35px;
+    border-radius: 20px;
+
+    margin-top: -50px;
+
+    background-color: white;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.p-button:hover{
+    border-color: black;
+    border-width: 3px;
+}
+.sideBar{
+    width: 400px;
+    height: 100vh;
+    position: fixed;
+    left: -400px;
+    background-color: rgb(255, 255, 255);
+    z-index: 4;
+}
+.sideBarOpening {
+    left: calc(0%);
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    background-color: rgb(255, 255, 255);
+}
+
+.sideBarClosing {
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    background-color: rgb(255, 255, 255);
+    left: -400px;
+}
+.coverImage{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 2;
+
+    visibility: hidden;
+}
+
+.sb-layout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin-top: 10px;
+    margin-right: 50px;
+}
+.p-inputTitle{
+    margin-bottom: 5px;
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.p-inputField{
+    width: 250px;
+    height: 35px;
+    border-radius: 8px;
+
+    margin-left: 30px;
+}
+.PT-anmeldungsbutton{
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 210px;
+    height: 40px;
+
+    background-color: white;
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+
+    border-radius: 20px;
+    border-color: red;
+    border-width: 4px;
+
+    position: relative;
+    z-index: 1;
+
+    animation: rackingAnim 8s ease;
+    animation-iteration-count:infinite;
+}
+.PT-anmeldungsbutton:hover{
+    color: white;
+    cursor: pointer;
+}
+.PT-anmeldungsbutton:before{
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    content: "";
+    background-color: red;
+    border-radius: 10px;
+}
+.PT-anmeldungsbutton:hover:before{
+    transition: 0.5s all ease;
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+@keyframes rackingAnim {
+    0%{
+        transform: rotateZ(0);
+    }
+    85%{
+        transform: rotateZ(0deg);
+    }
+    90%{
+        transform: rotateZ(3deg);
+    }
+    95%{
+        transform: rotateZ(-3deg);
+    }
+    100%{
+        transform: rotateZ(0deg);
+    }
+}
+
+.kontakt_page{
+    height: 400px;
+    width: 100%;
+    background-color: rgb(239, 239, 239);
+
+}
+
+.kontakt_colums_parent{
+    padding-top: 50px;
+    display: flex;
+    justify-content:space-evenly;
+
+    margin-right: 200px;
+}
+
+.kontakt_colums > p > a{
+    text-decoration: none;
+    color: black;
+    transition: all .2s ease-in-out;
+}
+.kontakt_colums > p > a:hover{
+    text-decoration: underline;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.kontakt_links{
+    position: absolute;
+
+    margin-top: -100px;
+    margin-left: 625px;
+}
+.kontakt_links > a{
+    margin-left: 30px;
+}
+
+
+@keyframes fadeIn {
+    from 
+    {
+        left: -400px;
+    } 
+    to 
+    {
+        left: 0px;
+    } 
+}
+@keyframes fadeOut {
+    from 
+    {
+        left: 0px;
+    } 
+    to 
+    {
+        left: -400px;
+    } 
+}
+
+@keyframes fadeInCoverImage
+{
+    from
+    {
+        background-color: rgba(0, 0, 0, 0);
+        visibility: hidden;
+    }
+    to
+    {
+        background-color: rgba(0, 0, 0, 0.61);
+        visibility: visible;
+    }
+}
+@keyframes fadeOutCoverImage
+{
+    from
+    {
+        background-color: rgba(0, 0, 0, 0.61);
+        visibility: visible;
+    }
+    to
+    {
+        background-color: rgba(0, 0, 0, 0);
+        visibility: hidden;
+    }
+}
+
