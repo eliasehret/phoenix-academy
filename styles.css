@@ -24,6 +24,10 @@ header > h1 {
     margin-right: auto;
     margin-left: 20px
 }
+header > h1 > a{
+    text-decoration: none;
+    color: black;
+}
 html{
     font-family:Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
@@ -157,11 +161,10 @@ body{
 .twoColumnTextContainer > p{
     font-size: 14px;
 }
-.TrainerPanal{
-    
+.TrainerPanal
+{
     /*box-shadow: 0px 15px 10px -1px rgba(0, 0, 0, 0.486);*/
     border-radius: 10px;
-
 }
 .TrainerDescription{
     margin-top: -450px;
@@ -170,7 +173,9 @@ body{
 .TrainerDescription > h1{
     color: black;
     font-size: 50px;
-    margin-left: 250px;
+    font-weight: 900;
+    margin-left: 230px;
+    margin-top: 30px;
 }
 .TrainerDescription > p{
     font-size: 15px;
@@ -190,10 +195,10 @@ body{
     width: 100%;
     height: 700px;
     margin-top: -20px;
-    /*
+    
     background-image: url(Images/tiegerhasen_background.png);
     background-size: 100% 100%;
-    */
+    
 
     box-shadow: 0px 0px 100px 20px rgba(0, 0, 0, 0.8);
     
@@ -214,6 +219,7 @@ body{
 }
 .kursplanSection > h1{
     font-size: 50px;
+    font-weight: 900;
     text-align: center;
 }
 .kursplanColumns{
@@ -225,7 +231,6 @@ body{
     align-items: center;
     gap: 50px;
 }
-
 .kurs
 {
     width: 300px;
@@ -305,6 +310,62 @@ body{
     object-position: 50% 25%; 
 }
 
+.Fragen_Antwort_Section{
+    margin-top: 150px;
+
+    height: 500px;
+
+    background-color: white;
+}
+.Fragen_Antwort_Section > h1{
+    text-align: center;
+
+    font-weight: 900;
+
+    margin-bottom: 50px;
+}
+.frage-item{
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+
+    background-color: rgb(230, 230, 230);
+
+    pointer-events: none;
+}
+.frage-item:has(.fragen_dropdown:hover){
+    transform: scale(101%);
+}
+.fragen_dropdown{
+    display: block;
+    height: 30px;
+
+    text-align: center;
+
+    padding-top: 10px;
+
+    pointer-events: auto;
+}
+.fragen_dropdown > h4{
+    margin-top: 0px;
+}
+.fragen_dropdown-content{
+    display: none;
+
+    text-align: center;
+    font-size: 13px;
+
+    padding-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+
+    pointer-events: auto;
+}
+
 .probetraining{
     width:1000px; 
     height: 500px; 
@@ -355,6 +416,7 @@ body{
     border-color: black;
     border-width: 3px;
 }
+
 .sideBar{
     width: 400px;
     height: 100vh;
@@ -370,7 +432,6 @@ body{
     -moz-transition: 1s;
     background-color: rgb(255, 255, 255);
 }
-
 .sideBarClosing {
     transition: 1s;
     -webkit-transition: 1s;
@@ -405,11 +466,13 @@ body{
     font-weight: bold;
 }
 .p-inputField{
-    width: 250px;
+    width: 230px;
     height: 35px;
     border-radius: 8px;
 
     margin-left: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .PT-anmeldungsbutton{
     margin-top: 30px;
@@ -477,9 +540,7 @@ body{
     height: 400px;
     width: 100%;
     background-color: rgb(239, 239, 239);
-
 }
-
 .kontakt_colums_parent{
     padding-top: 50px;
     display: flex;
@@ -487,11 +548,10 @@ body{
 
     margin-right: 200px;
 }
-
 .kontakt_colums > p > a{
     text-decoration: none;
     color: black;
-    transition: all .2s ease-in-out;
+    transition: all .15s ease-in-out;
 }
 .kontakt_colums > p > a:hover{
     text-decoration: underline;
@@ -506,28 +566,6 @@ body{
 }
 .kontakt_links > a{
     margin-left: 30px;
-}
-
-
-@keyframes fadeIn {
-    from 
-    {
-        left: -400px;
-    } 
-    to 
-    {
-        left: 0px;
-    } 
-}
-@keyframes fadeOut {
-    from 
-    {
-        left: 0px;
-    } 
-    to 
-    {
-        left: -400px;
-    } 
 }
 
 @keyframes fadeInCoverImage
