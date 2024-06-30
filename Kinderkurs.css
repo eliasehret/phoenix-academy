@@ -1,0 +1,32 @@
+.description{
+    margin-top: 50px;
+    margin-right: 150px;
+    margin-left: 150px;
+    margin-bottom: 100px;
+    
+    column-count: 2;
+    column-gap: 0px;
+    
+    text-align: left;
+}
+.description > h1{
+    font-size: 40px;
+    font-weight: 900;
+    color: red;
+}
+.description > p{
+    font-size: 14px;
+}
+.description > img{
+    width: 400px;
+    height: 500px;
+
+    object-fit: cover;
+    object-position: 50% 25%; 
+
+    border-radius: 12px;
+
+    box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.7);
+
+    margin-bottom: 10px;
+}
